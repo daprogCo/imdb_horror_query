@@ -12,11 +12,23 @@ So, I'll outline all the steps you need to follow to achieve the desired result.
 
 ## Steps
 
-1. Before starting this tutorial, make sure you have Docker installed on your machine. [Here's a link to install Docker Desktop](https://www.docker.com/products/docker-desktop/).
+### 1. Copy .tsv files locally
 
-2. Download the IMDb datasets: [title.basics.tsv.gz](https://datasets.imdbws.com/title.basics.tsv.gz) and [title.ratings.tsv.gz](https://datasets.imdbws.com/title.ratings.tsv.gz).
+Before starting this tutorial, make sure you have Docker installed on your machine. [Here's a link to install Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
-3. Extract the files from the archive folders and name the data files `basics.tsv` and `ratings.tsv`, respectively.
+Download the IMDb datasets: [title.basics.tsv.gz](https://datasets.imdbws.com/title.basics.tsv.gz) and [title.ratings.tsv.gz](https://datasets.imdbws.com/title.ratings.tsv.gz).
+
+Extract the files from the archive folders and name the data files `basics.tsv` and `ratings.tsv`, respectively.
+
+### 2. Implantation of Container Structure
+
+Clone this repository to your local machine.
+
+Open a terminal window from the local folder where you have cloned this repository's content and run the following command to install all the necessary components to process the IMDb data files:
+
+```bash
+docker-compose up -d
+```
 
 4. Clone this repository to your local machine.
 
