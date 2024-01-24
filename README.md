@@ -9,7 +9,7 @@ With a quick Google request, I've founded a structure that use Hadoop and Hive h
 So, I'll outline the steps you need to follow to achieve the desired result.  
 
 Steps
-* Before starting thi tutorial make sure you have Docker installed on your machine. Here's a link to install Docker Desktop: https://www.docker.com/products/docker-desktop/.
+* Before starting this tutorial make sure you have Docker installed on your machine. Here's a link to install Docker Desktop: https://www.docker.com/products/docker-desktop/.
 
 1. Download the IMDb datasets: https://datasets.imdbws.com/title.basics.tsv.gz and https://datasets.imdbws.com/title.ratings.tsv.gz.
 
@@ -25,4 +25,10 @@ Steps
   
    `docker ps`
 
+7. Take note of the 3-first digits of the id of the two containers named 'hive-server' and 'hadoop-namenode'.
+   ex.: d8a for d8a3865739de
 
+8. Copy the two .tsv files to the namenode container trough Docker.
+   Run these commands into your terminal window by changing the <namenode id> by id you took not of on step 7.
+
+   `docker cp basics.tsv <namenode id>:/tmp`
