@@ -82,6 +82,3 @@ So, I'll outline all the steps you need to follow to achieve the desired result.
     ```
 
 12. Sit back, relax, and enjoy the horror movie marathon! Grab your popcorn and get ready for an experience that might send a shiver down your spine!
-
-
-
