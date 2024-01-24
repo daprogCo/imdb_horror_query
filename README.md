@@ -64,7 +64,7 @@ Afterward, you can copy `.tsv` from the container file system into __HDFS__:
 &nbsp;  
 ### 4. Execution of SQL Queries
 
-Now that the files are in __HDFS__, it's time to run some queries in __Hive__. First, open a new terminal window and access the __hive-server__ CLI by changing `<hiveID>` to the id you took note of on step 6:
+Now that the files are in __HDFS__, it's time to run some queries in __Hive__. First, open a new terminal window and access the __hive-server__ CLI by changing `<hiveID>` to the id you took note of on step 2:
 ```bash
         docker exec -it <hiveID> bash
 ```
@@ -79,7 +79,7 @@ You will now run all the queries from the file `reqHive.sql` in this repository 
 &nbsp;
 ### 5. Creating the final file
 
-If you ran all the commands, you should have a file ready to copy to your local machine. Go to the first terminal window or open a new one and run this command by replacing `<hiveID>` with the id you took note of on step 6 and changing `<pathTo>` to the local path where you want to copy the `.csv` file to:
+If you ran all the commands, you should have a file ready to copy to your local machine. Go to the first terminal window or open a new one and run this command by replacing `<hiveID>` with the id you took note of on step 2 and changing `<pathTo>` to the local path where you want to copy the `.csv` file to:
 ```bash
         docker cp <hiveID>/final_view/000000_0 <pathTo>/horror2000s.csv
 ```
