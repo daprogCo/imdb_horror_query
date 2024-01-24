@@ -29,7 +29,7 @@ So, I'll outline the steps you need to follow to achieve the desired result.
    `docker ps`
 
 7. Take note of the 3-first digits of the id of the two containers named __'hive-server'__ and __'hadoop-namenode'__.
-   ex.: d8a for d8a3865739de
+   _ex.: d8a for d8a3865739de_
 
 8. Copy the two .tsv files to the namenode container trough Docker.
    Run these commands into your terminal window by changing the <namenode id> by id you took not of on step 7.
