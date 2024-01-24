@@ -34,29 +34,29 @@ Once the installation is complete, run the following command in your terminal wi
         docker ps
 ```
 
-Take note of the first 3 digits of the id of the two containers with names containing these strings 'hive-server' and 'hadoop-namenode', e.g., d8a for d8a3865739de.
+Take note of the first 3 digits of the id of the two containers with names containing these strings __'hive-server'__ and __'hadoop-namenode'__, _e.g., d8a for d8a3865739de_.
 
 &nbsp; 
 ### 3. Copy to Namenode Container
 
-Copy the two .tsv files into the namenode container. Run these commands in your terminal window by changing <namenodeID> to the id you took note of on step 2 and changing <pathTo> to the local path to the .tsv files:
+Copy the two .tsv files into the __namenode__ container. Run these commands in your terminal window by changing <namenodeID> to the id you took note of on step 2 and changing <pathTo> to the local path to the .tsv files:
 ```bash
         docker cp <pathTo>basics.tsv <namenodeID>:/tmp
         docker cp <pathTo>ratings.tsv <namenodeID>:/tmp
 ```
 
-Open a new terminal window and access the namenode container CLI:
+Open a new terminal window and access the __namenode__ container CLI:
 ```bash
         docker exec -it <namenodeID> bash
 ```
 
-You are now in the namenode container CLI. Now, you'll have to copy the `.tsv` files into HDFS (Hadoop File System). But first, you must create separate folders to copy your files into:
+You are now in the __namenode__ container CLI. Now, you'll have to copy the `.tsv` files into __HDFS__ _(Hadoop File System)_. But first, you must create separate folders to copy your files into:
 ```bash
         hdfs dfs -mkdir /user/hive/data/basics
         hdfs dfs -mkdir /user/hive/data/ratings
 ```
 
-Afterward, you can copy `.tsv` from the container file system into HDFS:
+Afterward, you can copy `.tsv` from the container file system into __HDFS__:
 ```bash
         hdfs dfs -copyFromLocal /tmp/basics.tsv /user/hive/data/basics
         hdfs dfs -copyFromLocal /tmp/ratings.tsv /user/hive/data/ratings
@@ -64,17 +64,17 @@ Afterward, you can copy `.tsv` from the container file system into HDFS:
 &nbsp;  
 ### 4. Execution of SQL Queries
 
-Now that the files are in HDFS, it's time to run some queries in Hive. First, open a new terminal window and access the hive-server CLI by changing `<hiveID>` to the id you took note of on step 6:
+Now that the files are in __HDFS__, it's time to run some queries in __Hive__. First, open a new terminal window and access the __hive-server__ CLI by changing `<hiveID>` to the id you took note of on step 6:
 ```bash
         docker exec -it <hiveID> bash
 ```
 
-You are now in the hive-server container CLI. You now want to access the Beeline CLI to run your SQL queries:
+You are now in the __hive-server__ container CLI. You now want to access the __Beeline__ CLI to run your SQL queries:
 ```bash
         /opt/hive/bin/beeline -u jdbc:hive2://localhost:10000/default
 ```
 
-You will now run all the queries from the file `reqHive.sql` in this repository to the Beeline CLI.
+You will now run all the queries from the file `reqHive.sql` in this repository to the __Beeline__ CLI.
 
 &nbsp;
 ### 5. Creating the final file
