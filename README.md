@@ -11,7 +11,7 @@ Since I am studying to become a data engineer and aiming to test my knowledge of
 So, I'll outline all the steps you need to follow to achieve the desired result.
 
 ## Steps
-
+</br>
 ### 1. Copy .tsv files locally
 
 Before starting this tutorial, make sure you have Docker installed on your machine. [Here's a link to install Docker Desktop](https://www.docker.com/products/docker-desktop/).
@@ -19,7 +19,7 @@ Before starting this tutorial, make sure you have Docker installed on your machi
 Download the IMDb datasets: [title.basics.tsv.gz](https://datasets.imdbws.com/title.basics.tsv.gz) and [title.ratings.tsv.gz](https://datasets.imdbws.com/title.ratings.tsv.gz).
 
 Extract the files from the archive folders and name the data files `basics.tsv` and `ratings.tsv`, respectively.
-
+</br>
 ### 2. Implantation of the containers structure
 
 Clone this repository to your local machine.
@@ -35,7 +35,7 @@ Once the installation is complete, run the following command in your terminal wi
         docker ps
 ```
 Take note of the first 3 digits of the id of the two containers with names containing these strings 'hive-server' and 'hadoop-namenode', e.g., d8a for d8a3865739de.
-
+</br>
 ### 3. Copy to Namenode Container
 
 Copy the two .tsv files into the namenode container. Run these commands in your terminal window by changing <namenodeID> to the id you took note of on step 2 and changing <pathTo> to the local path to the .tsv files:
@@ -64,7 +64,7 @@ Afterward, you can copy `.tsv` from the container file system into HDFS:
         hdfs dfs -copyFromLocal /tmp/basics.tsv /user/hive/data/basics
         hdfs dfs -copyFromLocal /tmp/ratings.tsv /user/hive/data/ratings
 ```
-
+</br>
 ### 4. Execution of SQL Queries
 
 Now that the files are in HDFS, it's time to run some queries in Hive. First, open a new terminal window and access the hive-server CLI by changing `<hiveID>` to the id you took note of on step 6:
@@ -80,7 +80,7 @@ You are now in the hive-server container CLI. You now want to access the Beeline
 ```
 
 You will now run all the queries from the file `reqHive.sql` in this repository to the Beeline CLI.
-
+</br>
 ### 5. Creating the final file
 
 If you ran all the commands, you should have a file ready to copy to your local machine. Go to the first terminal window or open a new one and run this command by replacing `<hiveID>` with the id you took note of on step 6 and changing `<pathTo>` to the local path where you want to copy the `.csv` file to:
