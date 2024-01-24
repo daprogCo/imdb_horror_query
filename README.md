@@ -20,7 +20,7 @@ Steps
 4. Open a terminal window from the local folder where you have cloned this repository's content and run the following command to install all the necessary components to process the IMDb data files:
    `docker-compose up -d`
 
-5. Once the installation is complete, run the following command in your terminal window to see all running containers on your machine:
-  `docker ps`
+6. Once the installation is complete, run the following command in your terminal window to see all running containers on your machine:
+   `docker ps`
 
 
