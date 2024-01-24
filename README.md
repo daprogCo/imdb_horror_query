@@ -11,7 +11,6 @@ Since I am studying to become a data engineer and aiming to test my knowledge of
 So, I'll outline all the steps you need to follow to achieve the desired result.
 
 ## Steps
-</br>
 ### 1. Copy .tsv files locally
 
 Before starting this tutorial, make sure you have Docker installed on your machine. [Here's a link to install Docker Desktop](https://www.docker.com/products/docker-desktop/).
