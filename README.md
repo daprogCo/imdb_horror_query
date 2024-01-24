@@ -73,7 +73,7 @@ _* Before starting this tutorial make sure you have Docker installed on your mac
 
     `/opt/hive/bin/beeline -u jdbc:hive2://localhost:10000/default`
 
-14. You will enter all the queries from the file reqHive.sql in this repository to the beeline command.
+14. You will now run all the queries from the file __reqHive.sql__ in this repository to the __beeline__ CLI.
   
 
 
