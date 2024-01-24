@@ -42,7 +42,7 @@ _* Before starting this tutorial make sure you have Docker installed on your mac
 
      `docker cp <pathTo>basics.tsv <namenodeID>:/tmp`
   
-     `docker cp <pathTo>ratings.tsv <pathTo>:/tmp`
+     `docker cp <pathTo>ratings.tsv <namenodeID>:/tmp`
 
 
 9. Open a new terminal window and access the __namenode__ container CLI:
