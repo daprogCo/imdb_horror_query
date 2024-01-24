@@ -75,6 +75,13 @@ So, I'll outline all the steps you need to follow to achieve the desired result.
 
 10. You will now run all the queries from the file `reqHive.sql` in this repository to the Beeline CLI.
 
-  
+11. If you ran all the commands, you should have a file ready to copy to your local machine. Go to the first terminal window or open a new one and run this command by replacing `<hiveID>` with the id you took note of on step 6 and changing `<pathTo>` to the local path where you want to copy the `.csv` file to:
+
+    ```bash
+    docker cp <hiveID>/final_view/000000_0 <pathTo>/horror2000s.csv
+    ```
+
+12. Sit back, relax, and enjoy the horror movie marathon! Grab your popcorn and get ready for an experience that might send a shiver down your spine!
+
 
 
