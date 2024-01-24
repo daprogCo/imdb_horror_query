@@ -16,7 +16,7 @@ So, I'll outline the steps you need to follow to achieve the desired result.
 
 1. Download the IMDb datasets: https://datasets.imdbws.com/title.basics.tsv.gz and https://datasets.imdbws.com/title.ratings.tsv.gz.
 
-2. Extract the files from the archive folders and name the data files basics.tsv and ratings.tsv, respectively.
+2. Extract the files from the archive folders and name the data files __basics.tsv__ and __ratings.tsv__, respectively.
 
 3. Clone this repository to your local machine.
 
@@ -28,7 +28,7 @@ So, I'll outline the steps you need to follow to achieve the desired result.
   
    `docker ps`
 
-7. Take note of the 3-first digits of the id of the two containers named 'hive-server' and 'hadoop-namenode'.
+7. Take note of the 3-first digits of the id of the two containers named __'hive-server'__ and __'hadoop-namenode'__.
    ex.: d8a for d8a3865739de
 
 8. Copy the two .tsv files to the namenode container trough Docker.
