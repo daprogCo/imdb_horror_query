@@ -72,6 +72,8 @@ _* Before starting this tutorial make sure you have Docker installed on your mac
 13. You are now in the __hive-server__ container CLI. You now want to access the __beeline__ CLI to run your __SQL queries__ :
 
     `/opt/hive/bin/beeline -u jdbc:hive2://localhost:10000/default`
+
+14. You will enter all the queries from the file reqHive.sql in this repository to the beeline command.
   
 
 
