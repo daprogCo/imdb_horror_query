@@ -1,4 +1,4 @@
-## Frightened by Hadoop & Hive?
+# Frightened by Hadoop & Hive?
 
 Hi there!
 
@@ -10,7 +10,7 @@ Since I am studying to become a data engineer and aiming to test my knowledge of
 
 So, I'll outline all the steps you need to follow to achieve the desired result.
 
-# Steps
+## Steps
 
 ### 1. Copy .tsv files locally
 
