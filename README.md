@@ -20,7 +20,7 @@ Download the IMDb datasets: [title.basics.tsv.gz](https://datasets.imdbws.com/ti
 
 Extract the files from the archive folders and name the data files `basics.tsv` and `ratings.tsv`, respectively.
 
-### 2. Implantation of Container Structure
+### 2. Implantation of the containers structure
 
 Clone this repository to your local machine.
 
