@@ -1,4 +1,4 @@
-# imdb_horror_query
+# Are you scared of Hadoop and Hive!!!
 
 Hi!
 
