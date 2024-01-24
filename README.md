@@ -45,11 +45,13 @@ So, I'll outline the steps you need to follow to achieve the desired result.
 10. You are now in the __namenode__ container CLI. Now, you'll have to copy the .tsv files into __hdfs__ _(Hadoop File System)_. But first you must create separate folders to copy your file into:
 
    `hfds dfs -mkdir /user/hive/data/basics`
+
    `hdfs dfs -mkdir /user/hive/data/ratings`
 
 11. Aftewards, you can copy .tsv from the container file system into __hdfs__:
 
    `hdfs dfs -copyFromLocal /tmp/basics.tsv /user/hive/data/basics`
+
    `hdfs dfs -copyFromLocal /tmp/ratings.tsv /user/hive/data/ratings`
 
 12. Now that the files are into __hdfs__ , it's time to do some querries in __Hive__.
