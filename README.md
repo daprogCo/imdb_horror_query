@@ -8,7 +8,7 @@ Since I am studying to become a data engineer and aiming to test my knowledge of
 With a quick Google request, I've founded a structure that use Hadoop and Hive here: https://github.com/big-data-europe/docker-hive/tree/master.
 So, I'll outline the steps you need to follow to achieve the desired result.  
 
-Steps
+#Steps
 * Before starting this tutorial make sure you have Docker installed on your machine. Here's a link to install Docker Desktop: https://www.docker.com/products/docker-desktop/.
 
 1. Download the IMDb datasets: https://datasets.imdbws.com/title.basics.tsv.gz and https://datasets.imdbws.com/title.ratings.tsv.gz.
