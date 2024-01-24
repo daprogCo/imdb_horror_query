@@ -32,4 +32,5 @@ Steps
    Run these commands into your terminal window by changing the <namenode id> by id you took not of on step 7.
 
    `docker cp basics.tsv <namenode id>:/tmp`
+
    `docker cp ratings.tsv <namenode id>:/tmp`
