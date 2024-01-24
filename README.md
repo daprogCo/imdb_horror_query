@@ -1,4 +1,4 @@
-# Frightened by Hadoop and Hive!!!
+# Frightened by Hadoop & Hive?
 
 Hi!
 
