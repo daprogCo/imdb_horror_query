@@ -1,7 +1,5 @@
 # imdb_horror_query
 
-Hi there!
+Hi!
 
-I'm actually studying to become a data engineer.
-One of my teacher, challenge us with a task to get a list of all the horror movies produced from the year 2000 to 2010 (inclusive) that have a imdb rating higher or equal to 6.
-The only tool given was this link to the imdb datasets : https://datasets.imdbws.com/ .
+I'm currently studying to become a data engineer. One of my teachers has challenged us with a task: to retrieve a list of all horror movies produced between the years 2000 and 2010 (inclusive) that have an IMDb rating equal to or higher than 6. The only tool provided for this task is the following link to the IMDb datasets: https://datasets.imdbws.com/.
