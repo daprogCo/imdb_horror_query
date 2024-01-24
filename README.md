@@ -38,7 +38,7 @@ _* Before starting this tutorial make sure you have Docker installed on your mac
 
 
 8. Copy the two .tsv files into the __namenode__ container.
-   Run these commands into your terminal window by changing the <namenodeID> by the id you took note of on step 7 and changing <pathTo> by the local path to the .tsv files:
+   Run these commands into your terminal window by changing the '<namenodeID>' by the id you took note of on step 7 and changing <pathTo> by the local path to the .tsv files:
 
      `docker cp <pathTo>basics.tsv <namenodeID>:/tmp`
   
@@ -65,7 +65,7 @@ _* Before starting this tutorial make sure you have Docker installed on your mac
 
 
 12. Now that the files are into __hdfs__ , it's time to do some querries in __Hive__.
-    First, open a new terminal window and access the __hive-server__ CLI by changing <hiveID> by the id you took note of on step 7:
+    First, open a new terminal window and access the __hive-server__ CLI by changing '<hiveID>' by the id you took note of on step 7:
 
      `docker exec -it <hiveID> bash`
 
