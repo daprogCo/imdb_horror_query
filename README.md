@@ -32,7 +32,7 @@ So, I'll outline the steps you need to follow to achieve the desired result.
    _ex.: d8a for d8a3865739de_
 
 8. Copy the two .tsv files to the namenode container trough Docker.
-   Run these commands into your terminal window by changing the <namenode id> by id you took not of on step 7.
+   Run these commands into your terminal window by changing the <namenode id> by id you took note of on step 7.
 
    `docker cp basics.tsv <namenode id>:/tmp`
 
