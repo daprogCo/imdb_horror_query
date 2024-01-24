@@ -25,12 +25,12 @@ _* Before starting this tutorial make sure you have Docker installed on your mac
 
 5. Open a terminal window from the local folder where you have cloned this repository's content and run the following command to install all the necessary components to process the IMDb data files:
 
-   `docker-compose up -d`
+     `docker-compose up -d`
 
 
 6. Once the installation is complete, run the following command in your terminal window to see all running containers on your machine:
   
-   `docker ps`
+     `docker ps`
 
 
 7. Take note of the 3-first digits of the id of the two containers with the name containing these strings __'hive-server'__ and __'hadoop-namenode'__.
@@ -40,34 +40,38 @@ _* Before starting this tutorial make sure you have Docker installed on your mac
 8. Copy the two .tsv files into the __namenode__ container.
    Run these commands into your terminal window by changing the <namenodeID> by the id you took note of on step 7 and changing <pathTo> by the local path to the .tsv files:
 
-   `docker cp <pathTo>basics.tsv <namenodeID>:/tmp`
-
-   `docker cp <pathTo>ratings.tsv <pathTo>:/tmp`
+     `docker cp <pathTo>basics.tsv <namenodeID>:/tmp`
+  
+     `docker cp <pathTo>ratings.tsv <pathTo>:/tmp`
 
 
 9. Open a new terminal window and access the __namenode__ container CLI:
 
-   `docker exec -it <namenodeID> bash`
+     `docker exec -it <namenodeID> bash`
    
 
 10. You are now in the __namenode__ container CLI. Now, you'll have to copy the .tsv files into __hdfs__ _(Hadoop File System)_. But first you must create separate folders to copy your file into:
    
-   `hfds dfs -mkdir /user/hive/data/basics`
+     `hfds dfs -mkdir /user/hive/data/basics`
    
-   `hdfs dfs -mkdir /user/hive/data/ratings`
+     `hdfs dfs -mkdir /user/hive/data/ratings`
 
 
 11. Aftewards, you can copy .tsv from the container file system into __hdfs__:
    
-   `hdfs dfs -copyFromLocal /tmp/basics.tsv /user/hive/data/basics`
+     `hdfs dfs -copyFromLocal /tmp/basics.tsv /user/hive/data/basics`
       
-   `hdfs dfs -copyFromLocal /tmp/ratings.tsv /user/hive/data/ratings`
+     `hdfs dfs -copyFromLocal /tmp/ratings.tsv /user/hive/data/ratings`
 
 
 12. Now that the files are into __hdfs__ , it's time to do some querries in __Hive__.
     First, open a new terminal window and access the __hive-server__ CLI by changing <hiveID> by the id you took note of on step 7:
 
-   `docker exec -it <hiveID> bash`
+     `docker exec -it <hiveID> bash`
 
+13. You are now in the __hive-server__ container CLI. You now want to access the __beeline__ CLI to run your __SQL queries__ :
+
+    `/opt/hive/bin/beeline -u jdbc:hive2://localhost:10000/default`
+  
 
 
