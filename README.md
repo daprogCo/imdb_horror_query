@@ -51,7 +51,7 @@ So, I'll outline the steps you need to follow to achieve the desired result.
 11. Aftewards, you can copy .tsv from the container file system into __hdfs__:
 
    `hdfs dfs -copyFromLocal /tmp/basics.tsv /user/hive/data/basics`
-
+   
    `hdfs dfs -copyFromLocal /tmp/ratings.tsv /user/hive/data/ratings`
 
 12. Now that the files are into __hdfs__ , it's time to do some querries in __Hive__.
