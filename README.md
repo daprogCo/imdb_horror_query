@@ -38,7 +38,7 @@ _* Before starting this tutorial make sure you have Docker installed on your mac
 
 
 8. Copy the two .tsv files into the __namenode__ container.
-   Run these commands into your terminal window by changing the &lt;namenodeID&gt; by the id you took note of on step 7 and changing <pathTo> by the local path to the .tsv files:
+   Run these commands into your terminal window by changing &lt;namenodeID&gt; by the id you took note of on step 7 and changing &lt;pathTo&gt; by the local path to the .tsv files:
 
      `docker cp <pathTo>basics.tsv <namenodeID>:/tmp`
   
