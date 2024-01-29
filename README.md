@@ -52,14 +52,14 @@ Open a new terminal window and access the __namenode__ container CLI:
 
 You are now in the __namenode__ container CLI. Now, you'll have to copy the `.tsv` files into __HDFS__ _(Hadoop File System)_. But first, you must create separate folders to copy your files into:
 ```bash
-        hdfs dfs -mkdir /user/hive/data/basics
-        hdfs dfs -mkdir /user/hive/data/ratings
+        hdfs dfs -mkdir /user/hive/basics
+        hdfs dfs -mkdir /user/hive/ratings
 ```
 
 Afterward, you can copy `.tsv` from the container file system into __HDFS__:
 ```bash
-        hdfs dfs -copyFromLocal /tmp/basics.tsv /user/hive/data/basics
-        hdfs dfs -copyFromLocal /tmp/ratings.tsv /user/hive/data/ratings
+        hdfs dfs -copyFromLocal /tmp/basics.tsv /user/hive/basics
+        hdfs dfs -copyFromLocal /tmp/ratings.tsv /user/hive/ratings
 ```
 &nbsp;  
 ### 4. Execution of SQL Queries
