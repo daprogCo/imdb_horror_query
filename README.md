@@ -27,11 +27,11 @@ Clone this repository to your local machine.
 
 Open a terminal window from the local folder where you have cloned this repository's content and run the following command to install all the necessary components to process the IMDb data files:
 ```bash
-        docker-compose up -d
+docker-compose up -d
 ```
 Once the installation is complete, run the following command in your terminal window to see all running containers on your machine:
 ```bash
-        docker ps
+docker ps
 ```
 
 Take note of the first 3 digits of the id of the two containers with names containing these strings __'hive-server'__ and __'hadoop-namenode'__, _e.g., d8a for d8a3865739de_.
@@ -41,37 +41,37 @@ Take note of the first 3 digits of the id of the two containers with names conta
 
 Copy the two .tsv files into the __namenode__ container. Run these commands in your terminal window by changing <namenodeID> to the id you took note of on step 2 and changing <pathTo> to the local path to the .tsv files:
 ```bash
-        docker cp <pathTo>basics.tsv <namenodeID>:/tmp
-        docker cp <pathTo>ratings.tsv <namenodeID>:/tmp
+docker cp <pathTo>basics.tsv <namenodeID>:/tmp
+docker cp <pathTo>ratings.tsv <namenodeID>:/tmp
 ```
 
 Open a new terminal window and access the __namenode__ container CLI:
 ```bash
-        docker exec -it <namenodeID> bash
+docker exec -it <namenodeID> bash
 ```
 
 You are now in the __namenode__ container CLI. Now, you'll have to copy the `.tsv` files into __HDFS__ _(Hadoop File System)_. But first, you must create separate folders to copy your files into:
 ```bash
-        hdfs dfs -mkdir /user/hive/basics
-        hdfs dfs -mkdir /user/hive/ratings
+hdfs dfs -mkdir /user/hive/basics
+hdfs dfs -mkdir /user/hive/ratings
 ```
 
 Afterward, you can copy `.tsv` from the container file system into __HDFS__:
 ```bash
-        hdfs dfs -copyFromLocal /tmp/basics.tsv /user/hive/basics
-        hdfs dfs -copyFromLocal /tmp/ratings.tsv /user/hive/ratings
+hdfs dfs -copyFromLocal /tmp/basics.tsv /user/hive/basics
+hdfs dfs -copyFromLocal /tmp/ratings.tsv /user/hive/ratings
 ```
 &nbsp;  
 ### 4. Execution of SQL Queries
 
 Now that the files are in __HDFS__, it's time to run some queries in __Hive__. First, open a new terminal window and access the __hive-server__ CLI by changing `<hiveID>` to the id you took note of on step 2:
 ```bash
-        docker exec -it <hiveID> bash
+docker exec -it <hiveID> bash
 ```
 
 You are now in the __hive-server__ container CLI. You now want to access the __Beeline__ CLI to run your SQL queries:
 ```bash
-        /opt/hive/bin/beeline -u jdbc:hive2://localhost:10000/default
+/opt/hive/bin/beeline -u jdbc:hive2://localhost:10000/default
 ```
 
 You will now run all the queries from the file `reqHive.sql` in this repository to the __Beeline__ CLI.
@@ -81,7 +81,7 @@ You will now run all the queries from the file `reqHive.sql` in this repository 
 
 If you ran all the commands, you should have a file ready to copy to your local machine. Go to the first terminal window or open a new one and run this command by replacing `<hiveID>` with the id you took note of on step 2 and changing `<pathTo>` to the local path where you want to copy the `.csv` file to:
 ```bash
-        docker cp <hiveID>/final_view/000000_0 <pathTo>/horror2000s.csv
+docker cp <hiveID>/final_view/000000_0 <pathTo>/horror2000s.csv
 ```
 
 Sit back, relax, and enjoy the horror movie marathon! Grab your popcorn and get ready for an experience that might send a shiver down your spine!
