@@ -14,7 +14,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS basics (
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\t'
 STORED AS TEXTFILE
-LOCATION '/user/hive/data/basics/';
+LOCATION '/user/hive/basics/';
 
 -- Step 2: Create an external table ratings from https://datasets.imdbws.com/title.ratings.tsv.gz
 
@@ -26,7 +26,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS ratings (
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\t'
 STORED AS TEXTFILE
-LOCATION '/user/hive/data/ratings/';
+LOCATION '/user/hive/ratings/';
 
 -- Step 3: Create a table movies from the partition basics
 
